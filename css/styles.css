@@ -1,0 +1,272 @@
+@charset "utf-8";
+
+
+
+/* Import Basic Design Styles Used on All Screens */
+
+@import url("gp_designs.css");
+
+html {
+    padding: 0;
+    
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {  
+   background: rgb(183, 235, 230);
+    padding: 0;
+    margin: 10px;
+    
+    
+}
+/*images were exceding the body that's why the body was not taking width 100%
+*/
+img {
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+}
+
+header {
+    width: 100%;
+    background-image: url("https://picsum.photos/2500/700");
+    height: 100%;
+   
+}
+
+/*  > because . is a class*/
+h1 {
+    /* display: block; h1 is already a block element */ 
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    background-color: lavenderblush;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 24px 12px;
+    flex-wrap: wrap;
+   
+    
+}
+
+.navbar > ul {
+    
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.navbar > ul > a {
+    
+   width: 100%;
+   color: black;
+   text-decoration: none;
+}
+
+.nav_element {
+    
+
+    width: 100%;
+    padding: 12px 0;
+    background:rgb(146, 235, 205);
+    border-style:dotted;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    margin: 6px 0;
+   
+}
+
+div{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 360px;
+    margin: auto;
+}
+section#PORTFOLIO{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+text-align: center;
+
+}
+section#PORTFOLIO > h1{
+padding: 40px;
+
+}
+
+section#HOME{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    font-size: larger;
+    margin: 20px;
+   
+
+
+}
+
+.home1
+{
+    display: flex;
+    border-radius: 50%;
+    border-color: black;
+    border-style: double;
+    width: 70%;
+    margin: 20px;
+    align-items: center;
+    text-align:justify;
+    max-width: 360px;
+    
+    
+}
+
+
+.CONTACT
+{   background-color: aliceblue;
+    min-height: 60px;
+    padding: 0%;
+    margin: auto;
+    text-align:center;
+    justify-items: center;
+    justify-content: center;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   
+}
+
+.CONTACT > h3 > a
+{
+    align-items: right;
+    color: gray;
+}
+
+.F1 {
+    display: flex;
+    margin: auto;
+    width: 90%;
+    justify-content: space-between;
+    flex-direction: row;
+   
+}
+.F1 > a{
+    border-style: outset;
+    border-radius: 10%;
+    border-color: rgb(148, 176, 236);
+    justify-content: left;
+    font-size: smaller;
+}
+
+.F2{
+    display: none;
+}
+
+
+
+/* ===================================================
+	Tablet and Desktop Devices: Greater than 480 pixels
+   ===================================================
+*/
+
+@media only screen and (min-width: 481px) {
+
+    .navbar{
+        height: 200px;
+    }
+    
+    .navbar > ul {
+       
+        display: flex;
+        flex-direction: row;
+        justify-self: center;
+     
+      
+
+    }
+
+    .nav_element {
+       
+        width: 70%;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: auto;
+        align-items: center;
+       
+        
+    }
+
+  
+
+    section#HOME {
+        
+        display:flex ;
+        flex-direction: row;
+        justify-content: space-around;
+        
+    }
+
+
+    section#HOME > p{
+        
+        order: 1;
+        width:40%;
+        justify-content:space-around;
+        font-size:xx-large;
+        color: rgb(13, 102, 105);
+        font-weight: bolder;
+        font-style: italic;
+        
+    }
+    section#HOME > img{
+        width: 200px;
+
+        order: 2;
+    }
+    .F1{
+        display: none;
+    }
+    .F2 {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        flex-direction: row;
+       
+      
+    }
+    .F2 > h3{
+        display: flex;
+        margin: auto;
+
+    }
+  
+    .F2 > ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 40%;
+        margin: 50px 20px;
+        justify-self: center;
+        
+
+    }
+    .F2 > ul > a{
+        border-radius: 10%;
+        border-color: rgb(148, 176, 236);
+    }
+    
+}
